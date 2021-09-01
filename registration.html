@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrácia</title>
+
+    <link rel="icon" href="resources/pictures/favicon.png" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="javascript/registrationScript.js"></script>
+
+</head>
+<body>
+<header id="main-header">
+    <h1 id="main-h1">
+        Registrácia
+    </h1>
+</header>
+<section>
+    <header id="section-header" class="reg-section-content">
+        <h2 id="section-h2">
+            Zadajte údaje
+        </h2>
+        <a id="undo" href="index.html" data-toggle="tooltip" title="Späť"><img src="resources/pictures/undo.svg" width="32" height="32" alt="undo"></a>
+    </header>
+    <div id="div-form" class="reg-section-content">
+        <form id="registration-form" onsubmit="return false;">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Zadajte email" required>
+                    <div id="email-validation" class="invalid-tooltip">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Meno</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Zadajte krstné meno" pattern='^(?!\s*$).+' required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="surname">Priezvisko</label>
+                    <input type="text" class="form-control" id="surname" name="surname" placeholder="Zadajte priezvisko" pattern='^(?!\s*$).+' required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="password">Heslo</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Zadajte heslo" required pattern='^(?!\s*$).+' oninput="checkSamePasswords()">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password-repeat">Zopakovať heslo</label>
+                    <input type="password" class="form-control" id="password-repeat" placeholder="Zadajte opäť heslo" required pattern='^(?!\s*$).+' oninput="checkSamePasswords()">
+                </div>
+            </div>
+            <h3 id="FA-h3">Dvojfaktorová autentifikácia</h3>
+            <div id="fa-label" class="form-row">
+                <div id="qr-code" class="form-group col-md-3">
+                </div>
+                <div id="qr-info" class="form-group col-md-3">
+                    QR kód si oskenujte aplikáciou <strong>Google Authenticator</strong> a následne zadajte 30 sekundový kód, ktorý Vám aplikácia vygenerovala.
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="code"><strong>Vygenerovaný kód</strong></label>
+                    <input type="text" class="form-control" id="code" name="code" placeholder="Zadajte vygenerovaný kód z aplikácie" pattern='^(?!\s*$).+' required>
+                    <div class="invalid-tooltip">
+                        Zadali ste nesprávny kód.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div id="button" class="form-group col-md-12">
+                    <button type="submit" class="btn btn-outline-primary" onclick="submitForm()">Zaregistrovať</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<footer>
+    <span>Designed by <a id="footer-href" href="http://147.175.121.202/~xpopikt/7243zadanie1/index.html">Tomáš Popík &copy; </a></span>
+</footer>
+
+</body>
+</html>
+

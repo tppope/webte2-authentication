@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prihlásenie</title>
+
+    <link rel="icon" href="resources/pictures/favicon.png" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="javascript/indexScript.js"></script>
+</head>
+<body>
+<div id="reg-logout-success" class="info">
+    <span>Boli ste úspešne odhlásený.</span>
+</div>
+<div id="reg-success" class="info">
+    <span>Registrácia prebehla úspešne, môžete sa prihlásiť.</span>
+</div>
+<div id="reg-failed" class="info">
+    <span>Registrácia neprebehla úspešne. Skúste to prosím znovu.</span>
+</div>
+<div id="google-already-used" class="info">
+    <span>Použili ste email, ktorý má už nastavený iný typ prihlásenia.</span>
+</div>
+<div id="google-unknown" class="info">
+    <span>Nastala neočakávaná chyba, skúste to opäť neskôr.</span>
+</div>
+<header id="main-header">
+    <h1 id="main-h1">
+        Prihlásenie
+    </h1>
+</header>
+<section>
+    <div id="choose-login" class="login-section-content">
+        <div id="ownLogin" onclick="changeLoginType(this)">
+            Vlastné
+        </div>
+        <div id="ldapLogin" onclick="changeLoginType(this)">
+            LDAP
+        </div>
+    </div>
+    <header id="section-header" class="login-section-content">
+        <h2 id="section-h2">
+            Zadajte údaje
+        </h2>
+    </header>
+    <div id="div-form" class="login-section-content">
+        <form id="login-form" onsubmit="return false;">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Zadajte email" id="email" required>
+                    <div id="email-validation" class="invalid-tooltip">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="password">Heslo</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Zadajte heslo" required pattern='^(?!\s*$).+'>
+                    <div id="password-validation" class="invalid-tooltip" >
+                    </div>
+                </div>
+            </div>
+            <div id="own-buttons" class="form-row">
+                <div id="reg-button" class="form-group col-md-6">
+                    <button onclick="window.location='registration.html'"  type="button" class="btn btn-outline-secondary">Zaregistrovať</button>
+                </div>
+                <div id="button" class="form-group col-md-6">
+                    <button type="submit" class="btn btn-outline-primary" onclick="submitOwnForm()">Prihlásiť</button>
+                </div>
+            </div>
+            <div id="ldap-buttons" class="form-row">
+                <div id="button-ldap" class="form-group col-md-12">
+                    <button type="submit" class="btn btn-outline-primary" onclick="submitLDAPForm()">Prihlásiť</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="google-button" class="login-section-content">
+        <img id="google-button-img" src="resources/pictures/google-button.png" width="210" height="50" alt="google-button">
+    </div>
+
+</section>
+<footer>
+    <span>Designed by <a id="footer-href" href="http://147.175.121.202/~xpopikt/7243zadanie1/index.html">Tomáš Popík &copy; </a></span>
+</footer>
+</body>
+</html>

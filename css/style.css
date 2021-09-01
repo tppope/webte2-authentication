@@ -1,0 +1,310 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    height: 100%;
+}
+#main-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 150px;
+}
+#main-h1{
+    font-family: "Roboto",sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    font-style: normal;
+    color: #000080;
+    text-align: center;
+}
+#section-h2{
+    font-family: "Roboto",sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: normal;
+}
+#div-form{
+    margin-top: 10px;
+}
+.reg-section-content{
+    width: 80%;
+    margin: auto;
+}
+.login-section-content{
+    width: 40%;
+    margin: auto;
+}
+.account-section-content{
+    width: 60%;
+    margin: auto;
+}
+.history-section-content{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+#choose-login{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+}
+#google-button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+}
+#google-button-img{
+    transition: height 500ms, width 500ms;
+    cursor: pointer;
+}
+#google-button-img:hover{
+    width: 231px;
+    height: 55px;
+}
+#ownLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    color: #000080;
+    transition: background-color 300ms;
+    height: 80px;
+    width: 50%;
+
+}
+#ldapLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: black;
+    transition: background-color 300ms;
+    cursor: pointer;
+    height: 80px;
+    width: 50%;
+}
+#section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+#button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#button-ldap{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#reg-button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    height: 40px;
+    width: 100%;
+    top: -100px;
+    transition: top 400ms;
+    text-align: center;
+    line-height: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#reg-failed{
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+#first-login{
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+#google-unknown{
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+#fa-unknown{
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+#google-already-used{
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+#reg-success{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+#reg-logout-success{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+#log-success{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+#logout{
+    width: 32px;
+    height: 32px;
+}
+#logout img{
+    cursor: pointer;
+    transition: height 300ms,width 300ms;
+}
+#undo img{
+    cursor: pointer;
+}
+#logout:hover img{
+    width: 40px;
+    height: 40px;
+}
+.user-info{
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+#button-history{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table-history{
+    width: 49%;
+    color: black;
+    background-color: white;
+    margin-bottom: 15px;
+}
+table{
+    text-align: center;
+}
+section{
+    margin-bottom: 100px;
+}
+#qr-code{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#qr-code img{
+    width: 18vw;
+    height: 18vw;
+}
+#FA-h3{
+    margin-bottom: 20px;
+    font-family: "Roboto",sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+}
+#qr-info{
+    font-family: "Roboto",sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+}
+#fa-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px){
+    .reg-section-content{
+        width: 94%;
+        margin: auto;
+    }
+    .login-section-content{
+        width: 94%;
+        margin: auto;
+    }
+    .account-section-content{
+        width: 94%;
+        margin: auto;
+    }
+    .history-section-content{
+        width: 94%;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #choose-login{
+        width: 100%;
+    }
+    #qr-code img{
+        width: 40vw;
+        height: 40vw;
+    }
+    #main-h1{
+        font-family: "Roboto",sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+        font-style: normal;
+        color: #000080;
+    }
+    #section-h2{
+        font-family: "Roboto",sans-serif;
+        font-size: 29px;
+        font-weight: bold;
+        font-style: normal;
+    }
+    #FA-h3{
+        font-size: 28px;
+    }
+    .info{
+        font-size: 15px;
+    }
+    .table-history{
+        width: 100%;
+    }
+}
+
